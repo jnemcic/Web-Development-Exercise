@@ -36,6 +36,7 @@ $slides.click(function(event){
   });
 });
 
+//test
 
 /*
 $slides.each(function(index, element) {
