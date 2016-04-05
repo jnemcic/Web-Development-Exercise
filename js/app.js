@@ -1,7 +1,7 @@
 var $overlay = $('<div id="overlay"></div>');
 var $image = $('<img>');
 var $caption = $("<p></p>"); 
-var $exit = $("<span class=\"exit\">&#10006;</span>");
+var $exit = $("<a href='#' class=\"exit\">&#10006;</a>");
 var $next = $("<span class='next'>&RightTriangle;</span>");
 var $prev = $("<span class='prev'>&LeftTriangle;</span>");
 
@@ -35,8 +35,6 @@ $slides.click(function(event){
         });
   });
 });
-
-//test
 
 /*
 $slides.each(function(index, element) {
@@ -78,8 +76,6 @@ $slides.each(function(index, element) {
 //  $caption.text(captionText);
 //  });
 //});
-
-
 
 $exit.click(function(){
   $overlay.hide();
