@@ -42,6 +42,8 @@ var $exit = $("<span class=\"exit\">&#10006;</span>");
 var $next = $("<span class='next'>&RightTriangle;</span>");
 var $prev = $("<span class='prev'>&LeftTriangle;</span>");
 
+//123
+
 $overlay.append($exit);
 $overlay.append($image);
 $overlay.append($caption);
