@@ -1,0 +1,33 @@
+var $overlay = $('<div id="overlay"></div>');
+var $image = $('<img>');
+var $caption = $("<p></p>"); 
+var $exit = $("<span class=\"exit\">&#10006;</span>");
+$overlay.append($exit);
+$overlay.append($image);
+$overlay.append($caption);
+
+$("#gallery").append($overlay);
+
+var $slides = $("a.lightbox");
+
+$slides.each(function(index, element){
+    var i = 0;
+    var $element = $slides[i];
+    var $index = i;
+
+    console.log($slides[i];
+    $element.click(function(event){
+        event.preventDefault();
+        var imageLocation = $element.eq(i).attr("href");
+        console.log(imageLocation);
+        $image.attr("src", imageLocation);
+    });
+    $overlay.show();
+    var captionText = $(this).children("img").attr("alt");
+    $caption.text(captionText);
+    
+});
+
+$exit.click(function(){
+    $overlay.hide();
+});

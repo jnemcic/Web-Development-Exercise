@@ -1,0 +1,78 @@
++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+var $overlay = $('<div id="overlay"></div>');
+var $image = $('<img>');
+var $caption = $("<p></p>"); 
+var $exit = $("<span class=\"exit\">&#10006;</span>");
+var $next = $("<span class='next'>&RightTriangle;</span>");
+var $prev = $("<span class='prev'>&LeftTriangle;</span>");
+var $selected = $(".selected");
+
+$overlay.append($exit);
+$overlay.append($image);
+$overlay.append($caption);
+$overlay.append($next);
+$overlay.append($prev);
+
+$("#gallery").append($overlay);
+
+var $slides = $("a.lightbox");
+
+$("#gallery li a:first-child").click(function(event) {
+  event.preventDefault(); 
+  var imageLocation = $(this).attr("href");
+  $image.attr("src", imageLocation);
+  
+  $overlay.show();
+  var captionText = $(this).children("img").attr("alt");
+  $caption.text(captionText);
+});
+
+$overlay.click(function(){
+  $overlay.hide();
+
+});
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+var $overlay = $('<div id="overlay"></div>');
+var $image = $('<img>');
+var $caption = $("<p></p>"); 
+var $exit = $("<span class=\"exit\">&#10006;</span>");
+var $next = $("<span class='next'>&RightTriangle;</span>");
+var $prev = $("<span class='prev'>&LeftTriangle;</span>");
+
+$overlay.append($exit);
+$overlay.append($image);
+$overlay.append($caption);
+$overlay.append($next);
+$overlay.append($prev);
+
+$("#gallery").append($overlay);
+
+var $slides = $("a.lightbox");
+
+
+$slides.click(function(event){
+    event.preventDefault();
+    $slides.each(function( index, element ){
+        event.preventDefault();
+        
+    });
+    
+    var imageLocation = $(this).attr("href");
+    $image.attr("src", imageLocation);
+    
+    $overlay.show();
+    var captionText = $(this).children("img").attr("alt");
+    $caption.text(captionText);
+    
+    $next.click(function(){
+        $slides.each(function)
+    });
+    
+}); 
+
+$exit.click(function(){
+    $overlay.hide();
+});
