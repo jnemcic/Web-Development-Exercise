@@ -15,7 +15,6 @@ $("#gallery").append($overlay);
 
 var $slides = $("a.lightbox");
 
-
 var current;
 
 $slides.each(function(i, el) {
@@ -24,7 +23,6 @@ $slides.each(function(i, el) {
     event.preventDefault();
 
     current = i;
-    console.log(current);
 
     var imageLocation = $(this).attr("href");
     $image.attr("src", imageLocation);
@@ -37,27 +35,49 @@ $slides.each(function(i, el) {
 
 });
 
-
 $next.click(function(event) {
   event.preventDefault();
 
   //var next = current + 1;
-  current = current + 1;
-  var nextLightbox = $($slides[current]);
-  //console.log(nextLightbox);
+  if (current < 7) {
+      current = current + 1;
+      var nextLightbox = $($slides[current]);
+      //console.log(nextLightbox);
 
-  var imageLocation = nextLightbox.attr("href");
-  $image.attr("src", imageLocation);
+      var imageLocation = nextLightbox.attr("href");
+      $image.attr("src", imageLocation);
 
-  var captionText = nextLightbox.children("img").attr("alt");
-  $caption.text(captionText);
+      var captionText = nextLightbox.children("img").attr("alt");
+      $caption.text(captionText);
+    }
+    else return;
 
+});
+
+
+$prev.click(function(event) {
+  event.preventDefault();
+
+  //var next = current + 1;
+  if (current >-1) {
+      current = current - 1;
+      var nextLightbox = $($slides[current]);
+      //console.log(nextLightbox);
+
+      var imageLocation = nextLightbox.attr("href");
+      $image.attr("src", imageLocation);
+
+      var captionText = nextLightbox.children("img").attr("alt");
+      $caption.text(captionText);
+    }
+    else return;
 });
 
 
 $exit.click(function() {
   $overlay.hide();
 });
+
 
 /*
 $slides.each(function(index, element) {
