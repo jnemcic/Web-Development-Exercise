@@ -17,40 +17,28 @@ var $slides = $("a.lightbox");
 
 var current;
 
-$slides.each(function(i, el) {
+var motion = function(current){ 
+    var imageLocation = $($slides[current]).attr("href");
+    $image.attr("src", imageLocation);
+    var captionText = $($slides[current]).children("img").attr("alt");
+    $caption.text(captionText);
+}
 
+$slides.each(function(i, el) {
   $(el).click(function(event){
     event.preventDefault();
-
     current = i;
-
-    var imageLocation = $(this).attr("href");
-    $image.attr("src", imageLocation);
-
-    var captionText = $(this).children("img").attr("alt");
-    $caption.text(captionText);
-
+    motion(current);
     $overlay.show();
   });
-
 });
-
-
 
 $next.click(function(event) {
   event.preventDefault();
   
-  //var next = current + 1;
   if (current < 6) {
     current = current + 1;
-      var nextLightbox = $($slides[current]);
-      //console.log(nextLightbox);
-
-      var imageLocation = nextLightbox.attr("href");
-      $image.attr("src", imageLocation);
-
-      var captionText = nextLightbox.children("img").attr("alt");
-      $caption.text(captionText);
+      motion(current);
       }
     else return;
 });
@@ -58,21 +46,12 @@ $next.click(function(event) {
 $prev.click(function(event) {
   event.preventDefault();
 
-  //var next = current + 1;
   if (current > 0) {
       current = current - 1;
-      var nextLightbox = $($slides[current]);
-      //console.log(nextLightbox);
-
-      var imageLocation = nextLightbox.attr("href");
-      $image.attr("src", imageLocation);
-
-      var captionText = nextLightbox.children("img").attr("alt");
-      $caption.text(captionText);
+      motion(current);
     }
     else return;
 });
-
 
 $exit.click(function() {
   $overlay.hide();
