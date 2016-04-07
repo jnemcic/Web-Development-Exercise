@@ -245,8 +245,8 @@ nav a.selected, nav a:hover {
 
 #overlay img {
   margin-top: 7%;
-    border: 5px solid #32673f;
-    border-radius: 5px;
+  border: 5px solid #32673f;
+  border-radius: 5px;
 }
 
 #overlay p {
@@ -254,38 +254,20 @@ nav a.selected, nav a:hover {
 }
 
 #overlay .exit {
-    top:0;
-    position: absolute;
-    top: 15px;
-    right: 25px;
-    font-size: 2em;
-}
-
-#overlay .next {
-    font-size: 25px;
-    background-color: grey;
-    color: white;   
-    position: absolute;
-    top: 0;
-    right: 0; 
-}
-#overlay .prev {
-    font-size: 25px;
-    background-color: grey;
-    color: white;
-    position: absolute;
-    top: 0;
-    left:0;
+  top:0;
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  font-size: 2em;
 }
 
 .inter_places {
-    list-style: none;
+  list-style: none;
 }
 
-/*
-a.control_prev, a.control_next {
+#overlay .next, #overlay .prev {
   position: absolute;
-  top: 40%;
+  top: 30%;
   z-index: 999;
   display: block;
   padding: 4% 3%;
@@ -300,17 +282,15 @@ a.control_prev, a.control_next {
   cursor: pointer;
 }
 
-a.control_prev:hover, a.control_next:hover {
-  opacity: 1;
-  -webkit-transition: all 0.2s ease;
+#overlay .prev:hover, #overlay .next:hover {
+  opacity: 0.4;
 }
 
-a.control_prev {
+#overlay .prev {
   border-radius: 0 2px 2px 0;
 }
 
-a.control_next {
+#overlay .next {
   right: 0;
   border-radius: 2px 0 0 2px;
 }
-*/
