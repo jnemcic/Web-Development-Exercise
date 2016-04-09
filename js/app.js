@@ -56,3 +56,36 @@ $prev.click(function(event) {
 $exit.click(function() {
   $overlay.hide();
 });
+
+
+var $menuIcon = $("<img class='menuIcon' src='./img/menu.png' />");
+$("#menu").append($menuIcon);
+var $select = $("<select class='menuSelect' multiple></select>");
+$("#menu").append($select);
+
+$("#menu a").each(function() {
+  
+  var $option = $("<option></option>");
+  var $anchor = $(this);
+  if($anchor.parent().hasClass("selected")) {
+    $option.prop("selected",true);
+  };
+
+  $option.val($anchor.attr("href"));
+  $option.text($anchor.text());
+  $select.append($option);
+    
+});
+
+$select.change(function(){
+  window.location = $select.val();
+});
+    
+$menuIcon.click( function(){ 
+    $select.toggle();
+    $("header > a > h2").toggle();
+});
+
+$(window).resize(function(){
+    $select.hide();
+});

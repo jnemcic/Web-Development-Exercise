@@ -1,38 +1,32 @@
 @media screen and (min-width: 260px) and (max-width: 480px)  {
+    
+  header {
+      height: 90px;
+  }
 
-  /**********************************
-  HEADER
-  ***********************************/
-
-  nav {
-    background: none;
-    float: right;
-    font-size: 1.125em;
-    margin-right: 5%;
-    text-align: right;
-    width: 45%;
+  #menu ul {
+    display: none;
+  }
+    
+  #menu select {
+    display: none;
   }
   
   #logo {
     float: left;
     margin-left: 5%;
     text-align: left;
-    width: 45%;
+    width: 80%;
   }
   
   h1 {
-    font-size: 2.5em;
+    font-size: 2em;
   }
-  
-  h2 {
-    font-size: 0.825em;
-    margin-bottom: 20px;
-  }
-  
-  header {
-    border-bottom: 5px solid #599a68;
-    margin-bottom: 60px;
-  }
+
+  h2{
+     font-size: 0.825em;
+     margin-bottom: 20px;
+    }
     
   #gallery li {
     width: 100%;
@@ -41,10 +35,10 @@
 
 @media screen and (min-width: 480px) and (max-width: 800px) {
   
-  /**********************************
-  TWO COLUMN LAYOUT
-  ***********************************/
-  
+  #menu select, #menu .menuIcon {
+    display: none;
+  }
+    
   #primary {
     width: 50%;
     float: left;
@@ -63,22 +57,17 @@
     clear: left;
   }
   
-  /**********************************
-  PAGE: ABOUT
-  ***********************************/
-  
   .profile-photo {
     float: left;
     margin: 0 5% 80px 0;
   }
-  
 }
 
 @media screen and (min-width: 800px) {
-
-  /**********************************
-  HEADER
-  ***********************************/
+    
+  #menu select, #menu .menuIcon {
+    display: none;
+  }
     
   #primary {
     width: 50%;
@@ -115,11 +104,6 @@
     margin-bottom: 20px;
   }
   
-  header {
-    border-bottom: 5px solid #599a68;
-    margin-bottom: 60px;
-  }
-  
   #gallery li {
     width: 28.3333%;
   }
@@ -128,6 +112,4 @@
     clear: left;
   }
 }
-
-
-
+    
