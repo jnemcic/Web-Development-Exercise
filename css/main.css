@@ -5,6 +5,7 @@ GENERAL
 body {
   font-family: 'Source Sans Pro', sans-serif;
   box-sizing: border-box;
+  background: white url('../img/back_body.png') 100% 0 no-repeat;
 }
 
 #wrapper {
@@ -15,10 +16,6 @@ body {
 
 a {
   text-decoration: none;
-}
-
-img {
-  max-width: 100%;
 }
 
 h3 {
@@ -32,7 +29,6 @@ header {
   background: #6ab47b;
   border-color: #599a68;
   border-bottom: 5px solid #599a68;
-  margin-bottom: 60px;
   height: 120px;
 }
 
@@ -76,6 +72,28 @@ nav a {
   padding: 15px 10px;
 }
 
+img {
+  max-width: 100%;
+  box-shadow: 6px 6px 14px rgba(0, 0, 0, 0.7);
+  padding: 5px;
+}
+
+.mainimg {
+    width: 66%;
+}
+
+.imgWrapper {
+    width: 100%;
+}
+
+.sideimg {
+    margin-bottom: 5%;
+}
+.sideimgWrapper {
+  width: 30%;
+  float: right;
+}
+
 footer {
   font-size: 0.75em;
   text-align: center;
@@ -88,8 +106,13 @@ footer {
   width: 40px;
   height: 40px;
   margin: 0 5px;
+  padding: 0;
 }
 
+#primary, #secondary {
+    background: white;
+    padding:5%;
+}
 /**********************************
 PAGE: PORTFOLIO
 ***********************************/
@@ -106,11 +129,10 @@ PAGE: PORTFOLIO
   margin: 2.5%;
   background-color: #f5f5f5;
   color: #bdc3c7;
-    text-align: center;
+  text-align: center;
 }
 
 #gallery li a p {
-  margin: 0;
   padding: 5%;
   font-size: 1em;
   color: #303030;
@@ -273,6 +295,7 @@ nav a.selected, nav a:hover {
     top: 15px;
     right: 10px;
     border-radius: 6px;
+    padding: 0;
 }
 
 #menu select {
@@ -292,4 +315,169 @@ nav a.selected, nav a:hover {
 #menu select option:hover {
     font-weight: bolder;
     color: darkslategray;
+}
+
+
+
+#contact-form {
+	width:100%;
+	height: 630px; 
+	margin: 0 auto;
+}
+#form-wrapper {
+	margin: 0 auto;
+	width: 90%;
+	position: relative;
+}
+#form-wrapper h2 {
+	color: #554d47;
+	font-size: 30px;
+	padding-top: 50px;
+	margin-bottom: 0;
+	float: left;
+	width: 100%;
+	font-weight: 500;
+	text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.4);
+}
+#form-wrapper h2 strong {
+	font-weight: 700;
+	text-transform: uppercase;
+	font-size: 28px;
+}
+#form-wrapper form {
+	float: left;
+}
+#form-wrapper .input-name,
+#form-wrapper .input-email,
+#form-wrapper .input-message {
+	float: left;
+	padding: 22px 20px 10px 0;
+	font-size: 16px;
+	color: #554d47;
+	position: relative;
+}
+#form-wrapper input#name,
+#form-wrapper input#email {
+	width: 290px;
+}
+#form-wrapper label {
+	float: left;
+	width: 320px;
+	padding-bottom: 7px;
+	color: #554d47;
+	text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.4);
+}
+#form-wrapper label.error {
+	position: absolute;
+	right: 20px;
+	top: 23px;
+	width: 260px;
+	text-align: right;
+	font-size: 14px;
+	padding: 0;
+	color: #64b1c4;
+	text-shadow: none;
+}
+
+#form-wrapper textarea {
+	width: 632px;
+}
+#form-wrapper input,
+#form-wrapper textarea {
+	padding: 15px 15px;
+	border-radius: 5px;
+	border: 1px solid #FFF;
+	background-clip: padding-box;
+	box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+	color: #e3dfdc;
+	color: #b9b2ac;
+}
+#form-wrapper input {
+	background: #FFF url(../img/input-shadow.png) bottom left repeat-x;
+}
+#form-wrapper textarea {
+	background: #FFF url(../img/textarea-shadow.png) bottom left repeat-x;
+	height: 210px;
+}
+#form-wrapper input:focus,
+#form-wrapper textarea:focus {
+	background: #FFF;
+	outline: none;
+	color: #554d47;
+}
+
+#form-wrapper input#submit {
+	background: #64b1c4;
+	float: left;
+	width: 200px;
+	padding: 9px 0; 
+	font-size: 25px;
+	margin-top: 5px;
+	border-color: rgba(255, 255, 255, .15);
+	color: #FFF;
+	text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.3);
+	font-weight: 500;
+}
+#form-wrapper input#submit:hover {
+	background: #64b1c4 url(../img/blue-shadow.png) 0 -20px repeat-x;
+}
+#form {
+	float: left;
+	width: 690px;
+}
+#form-sidebar {
+	float: right;
+	width: 300px;
+	padding: 130px 0 0 0;
+	text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.4);
+}
+#form-sidebar p {
+	font-size: 17px;
+	color: #aeaaa7;
+	line-height: 1.5em;
+	margin-bottom: 40px;
+}
+#form-sidebar p a {
+	color: #aeaaa7;
+	text-decoration: none;
+}
+#form-sidebar p a:hover {
+	color: darkslategrey;
+}
+#form-sidebar strong {
+	display: block;
+	font-size: 19px;
+	line-height: 1.7em;
+}
+#form-sidebar h3 {
+	color: #554d47;
+	font-size: 28px;
+	margin: 0 0 10px 0;
+	font-weight: 500;
+}
+#form-sidebar ul {
+	margin: 0;
+	list-style: none;
+}
+#form-sidebar ul li {
+	margin: 25px 0;
+}
+#form-sidebar ul li a {
+	text-decoration: none;
+	font-size: 18px;
+	font-weight: 600;
+	color: #aeaaa7;
+	padding: 10px 0 10px 52px;
+}
+#form-sidebar ul li a:hover {
+	color: darkslategrey;
+}
+#form-sidebar li#contact-twitter a {
+	background: url(../img/social.png) 0 0 no-repeat;
+}
+#form-sidebar li#contact-dribbble a {
+	background: url(../img/social.png) -200px 0 no-repeat;
+}
+#form-sidebar li#contact-flickr a {
+	background: url(../img/social.png) -400px 0 no-repeat;
 }

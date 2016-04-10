@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Cities of Croatia</title>
+    <link rel="icon" href="img/icon-cities.png">
     <link rel="stylesheet" href="css/normalize.css">
     <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/main.css">
@@ -11,39 +12,70 @@
   </head>
   <body>
     <header>
-      <a href="contact.html" id="logo">
-        <h1>Contact</h1>
-        <h2>Motivation and page information</h2>
+      <a href="index.html" id="logo">
+        <h1>Contact Form</h1>
+        <h2>Contact directly</h2>
       </a>
       <nav id="menu">
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="addinfo.html">Basic Information</a></li>
+          <li><a href="about-page.html">About Page</a></li>
           <li><a href="contact.html" class="selected">Contact</a></li>
         </ul>
       </nav>
     </header>
-    <div id="wrapper">
-      <section id="primary">
-        <h3>General Information</h3>
-        <p>This is a web page for exercise purposes on web development made after an example of <a href="https://teamtreehouse.com/library/how-to-make-a-website">How to Make a Website</a> course by <a href="https://teamtreehouse.com/nickpettit">Nick Pettit</a> on educational platform <a href="https://teamtreehouse.com/">Treehouse</a>, and with mentoring from the awesome developer team from <a href="http://inchoo.net/">Inchoo</a> - the eCommerce company specialized on <a href="https://magento.com/">Magento</a> platform.</p>
-        <p>I'm Josipa. You can find me on Twitter or Facebook by just clicking on the icons at the end of the page. If you have any questions don't hasitate to aks me!</p>
-        <p>Thank you for your time!</p>
-      </section>
-      <section id="secondary">
-        <h3>Contact Details</h3>
-        <ul class="contact-info">
-          <li class="phone"><a href="tel:555-6425">555-6425</a></li>
-          <li class="mail"><a href="mailto:josipa.nemcic@gmail.com">josipa.nemcic@gmail.com</a></li>
-          <li class="twitter"><a href="http://twitter.com/intent/tweet?screen_name=JosipaNemcic">@JosipaNemcic</a></li>
-        </ul>
-      </section>
-      <footer>
+    <div id="contact-form" >
+        <div id="form-wrapper">
+            <form id="commentform" class="cmxform">
+ 				<div id="form">
+ 					
+ 					<h2>Send an <strong>email</strong></h2>
+ 					 
+ 					<div class="input-name">
+                        <label>* Name:</label><br />
+                        <input type="text" id="name" class="required">
+	        		</div> 
+	        	
+	        		<div class="input-email">
+                        <label>* Email:</label><br />
+                        <input type="text" id="email" class="required">
+	        		</div>
+	        	
+	        		<div class="input-message">
+                        <label>Message:</label>
+                        <textarea id="message" rows="8"></textarea>
+	        		</div> 
+
+ 					<p><input type="submit" class="submit" id="submit" value="Send It!" /></p>
+ 				</div>
+            </form> 
+
+            <div id="form-sidebar">
+                <h3>University</h3>
+                <p><strong><a href="http://www.mathos.unios.hr/">J. J. Strossmayer University of Osijek</a></strong>
+                <strong>Department of Mathematics</strong>
+                Trg Ljudevita Gaja 6<br />
+                HR-31000 Osijek</p>
+
+                <h3>Elsewhere</h3>
+                <ul>
+                <li id="contact-twitter"><a href="https://twitter.com/">Twitter</a></li>
+                <li id="contact-flickr"><a href="http://www.flickr.com/">Flickr</a></li>
+                </ul>
+            </div>
+ 				 				
+ 		 </div>
+      </div>
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/app.js" type="text/javascript" charset="utf-8"></script>
+    <footer>
         <a href="https://twitter.com/JosipaNemcic"><img src="img/twitter-wrap.png" alt="Twitter Logo" class="social-icon"></a>
         <a href="https://www.facebook.com/jnemcic"><img src="img/facebook-wrap.png" alt="Facebook Logo" class="social-icon"></a>
       </footer>
-    </div>
+        <p></p>
       <script src="http://code.jquery.com/jquery-1.11.0.min.js" type="text/javascript" charset="utf-8"></script>
       <script src="js/app.js" type="text/javascript" charset="utf-8"></script>
+      
   </body>
 </html>

@@ -31,6 +31,11 @@
   #gallery li {
     width: 100%;
   }
+  
+    #form-wrapper textarea {
+        width: 100px;
+        
+    }
 }
 
 @media screen and (min-width: 480px) and (max-width: 800px) {

@@ -1,3 +1,5 @@
+//lightbox
+
 var $overlay = $('<div id="overlay"></div>');
 var $image = $('<img>');
 var $caption = $("<p></p>");
@@ -57,6 +59,7 @@ $exit.click(function() {
   $overlay.hide();
 });
 
+//mobile menu
 
 var $menuIcon = $("<img class='menuIcon' src='./img/menu.png' />");
 $("#menu").append($menuIcon);
@@ -84,8 +87,30 @@ $select.change(function(){
 $menuIcon.click( function(){ 
     $select.toggle();
     $("header > a > h2").toggle();
+    $("header").css("margin-bottom", "60px");
 });
 
 $(window).resize(function(){
     $select.hide();
+});
+
+//basic information - picture changing
+/*
+$(".sideimg").click(function(){
+    var tmp = $(this).attr("src");
+    $(this).attr("src", $(".mainimg").attr("src"));
+    $(".mainimg").attr("src", tmp);
+});
+*/
+
+var $sideimg =$(".sideimg");
+var index;
+
+$sideimg.each(function(i,el) {
+    $(el).click(function(){
+    var tmp = $(this).attr("src");
+        index = i%2 ? i/2-1/2 : i/2;
+    $(this).attr("src", $($(".mainimg")[index]).attr("src"));
+    $($(".mainimg")[index]).attr("src", tmp);
+})
 });
