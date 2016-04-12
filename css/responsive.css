@@ -26,16 +26,31 @@
   h2{
      font-size: 0.825em;
      margin-bottom: 20px;
-    }
+  }
     
   #gallery li {
     width: 100%;
   }
+
+  #form-wrapper, #form-sidebar {
+    width: 100%;
+  }
+
+  #form-wrapper .fields  {
+    width: 100%;
+  }
   
-    #form-wrapper textarea {
-        width: 100px;
-        
+  .fields textarea, .fields input{
+    width: 85%;
+    margin-bottom: 3%;
+  }
+    #form-wrapper .button {
+        width: 100%;
     }
+    #form-wrapper h2 {
+        margin-bottom: 3%;
+    }
+
 }
 
 @media screen and (min-width: 480px) and (max-width: 800px) {
@@ -66,6 +81,34 @@
     float: left;
     margin: 0 5% 80px 0;
   }
+    
+     #form-wrapper, #form-sidebar {
+        width: 100%;
+    }
+    
+    .fields textarea{
+        width: 90%;
+        margin-bottom: 3%;
+    }
+    .fields .name {
+        width: 50%;
+        float: left;
+        margin-bottom: 1%;
+    }
+    
+    .fields .name input, .fields .email input {
+        width: 80%;
+        margin-bottom:6%;
+    }
+    .fields .email {
+        width: 50%;
+        float: right;
+        margin-bottom: 1%;
+    }
+    #form-wrapper h2 {
+        margin-bottom: 3%;
+    }
+    
 }
 
 @media screen and (min-width: 800px) {
@@ -116,5 +159,36 @@
   #gallery li:nth-child(7n) {
     clear: left;
   }
+    
+    #contact-form {
+        width: 100%;
+    }
+    #form-wrapper{
+        width: 60%;
+        float:left;
+    }
+    #form-sidebar {
+        width: 30%;
+        float:left;
+    }
+    
+    .fields textarea{
+        width: 90%;
+        margin-bottom: 3%;
+    }
+    
+    .fields .name {
+        width: 50%;
+        float: left;
+        margin-bottom: 2%;
+    }
+    .fields .name input, .fields .email input {
+        width: 80%;
+    }
+    .fields .email {
+        width: 50%;
+        float: right;
+        margin-bottom: 2%;
+    }
 }
     

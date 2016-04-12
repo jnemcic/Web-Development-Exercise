@@ -28,44 +28,39 @@
     <div id="contact-form" >
         <div id="form-wrapper">
             <form id="commentform" class="cmxform">
- 				<div id="form">
- 					
- 					<h2>Send an <strong>email</strong></h2>
- 					 
- 					<div class="input-name">
+                <h2>Send an <strong>email</strong></h2>
+
+                <div class="fields">
+                    <div class="name">
                         <label>* Name:</label><br />
                         <input type="text" id="name" class="required">
-	        		</div> 
-	        	
-	        		<div class="input-email">
+                    </div>
+                    <div class="email">
                         <label>* Email:</label><br />
-                        <input type="text" id="email" class="required">
-	        		</div>
-	        	
-	        		<div class="input-message">
+                        <input type="email" id="email" class="required">
+                    </div>
+                    <div class="message">
                         <label>Message:</label>
                         <textarea id="message" rows="8"></textarea>
-	        		</div> 
+                    </div>
+                </div> 
 
- 					<p><input type="submit" class="submit" id="submit" value="Send It!" /></p>
- 				</div>
+                <div class="button"><button type="submit" class="submit" id="submit" />Send</button></div>
             </form> 
+        </div>
+        <div id="form-sidebar">
+            <h3>University</h3>
+            <p><strong><a href="http://www.mathos.unios.hr/">J. J. Strossmayer University of Osijek</a></strong><br />
+            <strong>Department of Mathematics</strong><br />
+            Trg Ljudevita Gaja 6<br />
+            HR-31000 Osijek</p>
 
-            <div id="form-sidebar">
-                <h3>University</h3>
-                <p><strong><a href="http://www.mathos.unios.hr/">J. J. Strossmayer University of Osijek</a></strong>
-                <strong>Department of Mathematics</strong>
-                Trg Ljudevita Gaja 6<br />
-                HR-31000 Osijek</p>
-
-                <h3>Elsewhere</h3>
-                <ul>
-                <li id="contact-twitter"><a href="https://twitter.com/">Twitter</a></li>
-                <li id="contact-flickr"><a href="http://www.flickr.com/">Flickr</a></li>
-                </ul>
-            </div>
- 				 				
- 		 </div>
+            <h3>Elsewhere</h3>
+            <ul>
+            <li id="contact-twitter"><a href="https://twitter.com/JosipaNemcic">Twitter</a></li>
+            <li id="contact-facebook"><a href="http://www.facebook.com/jnemcic">Facebook</a></li>
+            </ul>
+        </div>
       </div>
 	<script src="http://code.jquery.com/jquery-1.11.0.min.js" type="text/javascript" charset="utf-8"></script>
 	<script src="js/app.js" type="text/javascript" charset="utf-8"></script>

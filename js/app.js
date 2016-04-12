@@ -95,6 +95,7 @@ $(window).resize(function(){
 });
 
 //basic information - picture changing
+
 /*
 $(".sideimg").click(function(){
     var tmp = $(this).attr("src");
