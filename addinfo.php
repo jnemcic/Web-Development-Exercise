@@ -1,30 +1,9 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Cities of Croatia</title>
-    <link rel="icon" href="img/icon-cities.png">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="css/main.css">
-      <link rel="stylesheet" href="css/responsive.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  </head>
-  <body>
-    <header>
-      <a href="addinfo.html" id="logo">
-        <h1>Basic Information</h1>
-        <h2>Quick Preview</h2>
-      </a>
-      <nav id="menu">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="addinfo.html" class="selected">Basic Information</a></li>
-          <li><a href="about-page.html">About Page</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
+<?php 
+$section = "basic";
+$pageTitle = "Basic Information";
+
+include("inc/header.php"); ?>
+
     <div id="wrapper">
     <div class="cities">    
         <section>
@@ -236,13 +215,5 @@
             </table>        
         </section>
         </div>
-      <footer>
-        <a href="https://twitter.com/JosipaNemcic"><img src="img/twitter-wrap.png" alt="Twitter Logo" class="social-icon"></a>
-        <a href="https://www.facebook.com/jnemcic"><img src="img/facebook-wrap.png" alt="Facebook Logo" class="social-icon"></a>
-          <p></p>
-      </footer>
-    </div>
-      <script src="http://code.jquery.com/jquery-1.11.0.min.js" type="text/javascript" charset="utf-8"></script>
-      <script src="js/app.js" type="text/javascript" charset="utf-8"></script>
-  </body>
-</html>
+
+<?php include("inc/footer.php"); ?>
