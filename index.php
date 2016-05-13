@@ -2,9 +2,10 @@
 $pageTitle = "Cities of Croatia";
 $section = null;
 
+
 if (isset($_GET[""])) {
     if ($_GET["nav"] == "home") {
-        $pageTitle = "Home";
+        $pageTitle = "Cities of Croatia";
         $section = "home";
     } else if ($_GET["nav"] == "basic") {
         $pageTitle = "Basic Information";
@@ -28,43 +29,43 @@ include("inc/header.php"); ?>
         <a href="images/osijek.jpg" class="lightbox">
           <img src="images/osijek.jpg" alt="Osijek"/>
         </a>
-        <p>More information on click: <a href="addinfo.html#os">Osijek</a></p>
+        <p>More information on click: <a href="addinfo.php#os">Osijek</a></p>
       </li>
       <li>
         <a href="images/rovinj.jpg" class="lightbox">
           <img src="images/rovinj.jpg" alt="Rovinj"/>
         </a>
-        <p>More information on <a href="addinfo.html#rv">Rovinj</a>.</p>
+        <p>More information on <a href="addinfo.php#rv">Rovinj</a>.</p>
       </li>
       <li>
         <a href="images/dubrovnik.jpg" class="lightbox">
           <img src="images/dubrovnik.jpg" alt="Dubrovnik"/>
         </a>
-        <p>More information on <a href="addinfo.html#du">Dubrovnik</a>.</p>
+        <p>More information on <a href="addinfo.php#du">Dubrovnik</a>.</p>
       </li>
       <li>
         <a href="images/zagreb.jpg" class="lightbox">
           <img src="images/zagreb.jpg" alt="Zagreb"/>
         </a>
-        <p>More information on <a href="addinfo.html#zg">Zagreb</a>.</p>
+        <p>More information on <a href="addinfo.php#zg">Zagreb</a>.</p>
       </li>
       <li>
         <a href="images/split.jpg" class="lightbox">
           <img src="images/split.jpg" alt="Split"/>
         </a>
-        <p>More information on <a href="addinfo.html#sp">Split</a>.</p>
+        <p>More information on <a href="addinfo.php#sp">Split</a>.</p>
       </li>
       <li>
         <a href="images/varazdin.jpg" class="lightbox">
           <img src="images/varazdin.jpg" alt="Varaždin"/>
         </a>
-        <p>More information on <a href="addinfo.html#vz">Varaždin</a>.</p>
+        <p>More information on <a href="addinfo.php#vz">Varaždin</a>.</p>
       </li>
       <li>
         <a href="images/pula.jpg" class="lightbox">
           <img src="images/pula.jpg" alt="Pula"/>
         </a>
-        <p>More information on <a href="addinfo.html#pu">Pula</a>.</p>
+        <p>More information on <a href="addinfo.php#pu">Pula</a>.</p>
       </li>
     </ul>
   </section>

@@ -7,8 +7,8 @@ var $overlay = $('<div id="overlay"></div>');
 var $image = $('<img>');
 var $caption = $("<p></p>");
 var $exit = $("<a href='#' class=\"exit\">&#10006;</a>");
-var $next = $("<a href='#' class='next'>&RightTriangle;</a>");
-var $prev = $("<a href='#' class='prev'>&LeftTriangle;</a>");
+var $next = $("<a href='#' class='next'><img src='img/next.png' /></a>");
+var $prev = $("<a href='#' class='prev'><img src='img/prev.png' /></a>");
 
 $overlay.append($exit);
 $overlay.append($image);
@@ -58,6 +58,23 @@ $prev.click(function(event) {
         motion(current);
     }
     else return;
+});
+
+$("body").keydown(function(e) {
+  if(e.keyCode == 37 && current > 0 ) { //prev
+    current = current - 1;
+    motion(current);
+  }
+  else if(e.keyCode == 39 && current < 6) { //next
+    current = current + 1;
+    motion(current);
+  }
+});
+
+$("body").keypress(function(e){
+    if(e.keyCode == 27){
+        $overlay.hide();
+    }
 });
 
 $next.click(function(event){
@@ -125,6 +142,5 @@ $sideimg.each(function(i,el) {
         $($(".mainimg")[index]).attr("src", tmp);
     });
 });
-    
     
 })(jQuery);
